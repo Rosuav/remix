@@ -276,7 +276,7 @@ SoundTouch_putSamples(SoundTouch *self, PyObject *args)
     }
   catch(std::runtime_error &error)
     {
-      PyErr_Format(PyExc_RuntimeError, error.what());
+      PyErr_SetString(PyExc_RuntimeError, error.what());
       return NULL;
     }
 
